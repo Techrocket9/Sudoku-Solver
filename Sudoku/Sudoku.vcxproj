@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7E846133-E4C4-306D-A626-CE76198CBFED}</ProjectGuid>
+    <RootNamespace>Sudoku</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolSet>v140</PlatformToolSet>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>Sudoku</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolSet>v140</PlatformToolSet>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>Sudoku</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Sudoku</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Sudoku</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtCore;release;$(QTDIR)\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(QTDIR)\lib\qtmain.lib;shell32.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\utils\postgresql\pgsql\lib;C:\utils\my_sql\my_sql\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\Sudoku.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtCore;debug;$(QTDIR)\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(QTDIR)\lib\qtmaind.lib;shell32.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\utils\postgresql\pgsql\lib;C:\utils\my_sql\my_sql\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\Sudoku.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="aboutdialog.cpp" />
+    <ClCompile Include="abstractsolver.cpp" />
+    <ClCompile Include="Debug\moc_aboutdialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_abstractsolver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_gridboard.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_gridboard_p.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_gridmodel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_heuristicsearchsolver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_mainwindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_sudokuboard.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_sudokusolver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="gridboard.cpp" />
+    <ClCompile Include="gridmodel.cpp" />
+    <ClCompile Include="heuristicsearchsolver.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainwindow.cpp" />
+    <ClCompile Include="Release\moc_aboutdialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_abstractsolver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_gridboard.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_gridboard_p.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_gridmodel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_heuristicsearchsolver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_mainwindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_sudokuboard.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_sudokusolver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="sudokuboard.cpp" />
+    <ClCompile Include="sudokusolver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="aboutdialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing aboutdialog.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing aboutdialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="aboutdialog_p.h" />
+    <CustomBuild Include="abstractsolver.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing abstractsolver.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing abstractsolver.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="abstractsolver_p.h" />
+    <CustomBuild Include="gridboard.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing gridboard.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing gridboard.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="gridboard_p.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing gridboard_p.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing gridboard_p.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="gridmodel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing gridmodel.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing gridmodel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="gridmodel_p.h" />
+    <CustomBuild Include="heuristicsearchsolver.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing heuristicsearchsolver.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing heuristicsearchsolver.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="mainwindow.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing mainwindow.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing mainwindow.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="mainwindow_p.h" />
+    <CustomBuild Include="sudokuboard.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing sudokuboard.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing sudokuboard.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="sudokuboard_p.h" />
+    <CustomBuild Include="sudokusolver.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing sudokusolver.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I$(QTDIR)\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing sudokusolver.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="sudokusolver_p.h" />
+    <ClInclude Include="version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boards\Dodeka.board" />
+    <None Include="Resources\Presets\Dodeka\Dodeka_12x12.sdk" />
+    <None Include="Resources\Boards\Giant.board" />
+    <None Include="Resources\Presets\Giant\Giant_25x25.sdk" />
+    <None Include="Resources\Boards\Hyper.board" />
+    <None Include="Resources\Presets\Hyper\Hyper_9x9.sdk" />
+    <None Include="Resources\Boards\Jigsaw.board" />
+    <None Include="Resources\Presets\Jigsaw\Jigsaw_9x9.sdk" />
+    <None Include="Resources\Boards\Mini.board" />
+    <None Include="Resources\Presets\Mini\Mini_6x6.sdk" />
+    <None Include="Resources\Presets\NPC\NPC_16x16.sdk" />
+    <None Include="Resources\Boards\Number Place Challenger.board" />
+    <None Include="Resources\Boards\Small.board" />
+    <None Include="Resources\Presets\Small\Small_4x4.sdk" />
+    <None Include="Resources\Boards\Standard.board" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_001_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_001_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_002_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_002_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_003_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_003_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_004_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_004_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_005_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_005_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_006_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_006_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_007_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_007_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_008_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_008_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_009_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_009_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_010_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_010_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_011_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_011_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_012_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_012_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_013_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_013_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_014_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_014_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_015_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_015_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_016_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_016_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_017_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_017_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_018_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_018_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_019_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_019_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_020_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_020_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_021_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_021_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_022_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_022_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_023_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_023_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_024_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_024_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_025_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_025_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_026_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_026_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_027_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_027_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_028_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_028_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_029_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_029_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_030_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_030_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_031_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_031_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_032_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_032_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_033_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_033_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_034_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_034_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_035_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_035_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_036_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_036_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_037_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_037_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_038_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_038_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_039_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_039_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_040_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_040_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_041_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_041_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_042_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_042_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_043_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_043_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_044_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_044_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_045_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_045_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_046_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_046_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_047_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_047_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_048_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_048_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_049_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_049_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_050_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_050_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_051_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_051_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_052_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_052_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_053_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_053_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_054_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_054_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_055_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_055_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_056_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_056_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_057_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_057_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_058_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_058_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_059_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_059_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_060_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_060_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_061_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_061_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_062_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_062_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_063_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_063_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_064_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_064_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_065_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_065_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_066_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_066_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_067_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_067_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_068_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_068_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_069_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_069_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_070_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_070_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_071_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_071_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_072_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_072_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_073_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_073_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_074_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_074_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_075_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_075_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_076_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_076_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_077_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_077_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_078_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_078_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_079_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_079_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_080_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_080_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_081_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_081_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_082_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_082_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_083_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_083_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_084_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_084_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_085_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_085_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_086_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_086_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_087_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_087_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_088_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_088_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_089_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_089_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_090_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_090_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_091_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_091_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_092_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_092_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_093_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_093_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_094_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_094_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_095_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_095_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_096_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_096_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_097_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_097_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_098_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_098_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_099_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_099_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Easy\Standard_100_9x9.sdk" />
+    <None Include="Resources\Presets\Standard\Hard\Standard_100_9x9.sdk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources\win.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" Qt5Version_x0020_x64="5.6.0.0" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
